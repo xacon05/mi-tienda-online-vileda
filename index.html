@@ -3,172 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distribución Profesional - Vileda</title>
+    <title>Venta Profesional - Vileda</title>
     <style>
-        :root {
-            --vileda-red: #e2001a; /* El rojo característico de la marca */
-            --dark: #1a1a1a;
-            --bg: #ffffff;
-            --gray: #f4f4f4;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            background-color: var(--bg);
-            color: var(--dark);
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* Cabecera */
-        header {
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-            margin-bottom: 40px;
+            background-color: #ffffff;
+            color: #333;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
         }
-
-        .logo {
-            font-weight: 900;
-            font-size: 1.5rem;
-            color: var(--vileda-red);
-            text-transform: uppercase;
-        }
-
-        /* Layout Principal */
-        .main-grid {
+        .container {
+            max-width: 900px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: start;
+            gap: 40px;
+            border: 1px solid #eee;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
-
-        /* Contenedor de la Imagen */
-        .product-image-container {
-            background: var(--gray);
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .product-image-container img {
+        .foto-vileda img {
             width: 100%;
-            height: auto;
-            max-width: 450px;
-            mix-blend-mode: multiply; /* Para que el fondo blanco de la foto se integre */
+            border-radius: 5px;
         }
-
-        /* Info y Venta */
-        .product-info h1 {
-            font-size: 2.5rem;
-            margin-top: 0;
-        }
-
-        .price {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--vileda-red);
+        h1 { color: #e2001a; margin-top: 0; }
+        .contacto-box {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
             margin: 20px 0;
         }
-
-        .contact-box {
-            background: #fff;
-            border: 2px solid var(--dark);
-            padding: 25px;
-            margin-top: 30px;
-            border-radius: 4px;
-        }
-
-        .contact-method {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        .contact-method strong {
-            width: 80px;
-            color: #555;
-        }
-
-        /* Botón Bizum con estilo */
-        .bizum-tag {
-            background-color: #00aae4;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-left: 10px;
+        .bizum {
+            color: #00aae4;
             font-weight: bold;
+            font-size: 1.2rem;
         }
-
-        .btn-contact {
+        .btn-pedido {
             display: block;
-            background: var(--dark);
+            background: #1a1a1a;
             color: white;
             text-align: center;
             padding: 15px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 20px;
-            transition: 0.3s;
+            border-radius: 5px;
         }
-
-        .btn-contact:hover {
-            background: var(--vileda-red);
-        }
-
-        @media (max-width: 768px) {
-            .main-grid { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 700px) { .container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <div class="logo">Vileda Professional</div>
-        <div class="status">● Disponible en stock</div>
-    </header>
-
-    <div class="main-grid">
-        <div class="product-image-container">
-            <img src="https://m.media-amazon.com/images/I/71R2oI87X5L._AC_SL1500_.jpg" alt="Bayeta Vileda Profesional">
+    <div class="foto-vileda">
+        <img src="vileda.jpg" alt="Bayeta Vileda Original">
+    </div>
+    
+    <div class="info">
+        <h1>Vileda Professional</h1>
+        <p>Bayeta de alta resistencia y máxima absorción. Ideal para resultados profesionales sin dejar huella.</p>
+        
+        <div class="contacto-box">
+            <p><strong>Email:</strong> contacto@tuempresa.com</p>
+            <p><strong>Pago por Bizum:</strong> <span class="bizum">600 000 000</span></p>
         </div>
-
-        <div class="product-info">
-            <h1>Bayeta Vileda Original</h1>
-            <p>Máxima capacidad de limpieza y durabilidad profesional. No deja rastros, absorción superior garantizada.</p>
-            
-            <div class="price">Consultar Lote</div>
-
-            <div class="contact-box">
-                <h3>Métodos de Pago y Contacto</h3>
-                
-                <div class="contact-method">
-                    <strong>Bizum:</strong> <span>+34 600 000 000</span> <span class="bizum-tag">PAGO RÁPIDO</span>
-                </div>
-
-                <div class="contact-method">
-                    <strong>Email:</strong> <span>contacto@tuempresa.com</span>
-                </div>
-
-                <a href="mailto:contacto@tuempresa.com" class="btn-contact">PEDIR AHORA</a>
-            </div>
-            
-            <p style="font-size: 0.8rem; color: #888; margin-top: 15px;">
-                * Envíos urgentes disponibles tras confirmación de pago por Bizum.
-            </p>
-        </div>
+        
+        <a href="mailto:contacto@tuempresa.com" class="btn-pedido">ENVIAR CORREO PARA PEDIDO</a>
     </div>
 </div>
+
+</body>
+</html>
 
 </body>
 </html>
