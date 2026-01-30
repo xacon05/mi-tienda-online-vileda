@@ -3,113 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venta Profesional - Vileda</title>
+    <title>Vileda Professional - Pedidos Online</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px;
         }
         .container {
-            max-width: 900px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            background: #fff;
-            padding: 40px;
-            border-radius: 25px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            max-width: 850px; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+            background: rgba(255, 255, 255, 0.98); padding: 40px; border-radius: 25px; box-shadow: 0 20px 50px rgba(0,0,0,0.3);
         }
-        .foto-producto img { width: 100%; border-radius: 15px; }
-        h1 { color: #e2001a; margin: 0; }
-        .precio { font-size: 2rem; font-weight: 800; margin: 10px 0; }
-        
-        /* Estilo del Formulario */
-        .formulario-contacto {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-        }
+        .foto img { width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .foto img:hover { transform: scale(1.03); }
+        h1 { color: #e2001a; margin: 0; font-size: 2.2rem; }
+        .precio { font-size: 2.5rem; font-weight: 800; color: #333; margin: 10px 0; }
+        .formulario { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
+        input, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; box-sizing: border-box; }
         .btn-enviar {
-            background: #1a1a1a;
-            color: #fff;
-            border: none;
-            padding: 15px;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
+            background: #1a1a1a; color: #fff; border: none; padding: 18px; font-weight: bold;
+            border-radius: 8px; cursor: pointer; transition: 0.3s; font-size: 1.1rem;
         }
-        .btn-enviar:hover { background: #e2001a; }
-
-        .bizum-box {
-            background: #f1f3f5;
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 5px solid #00aae4;
-            margin-top: 20px;
-        }
-
+        .btn-enviar:hover { background: #e2001a; transform: translateY(-2px); }
+        .bizum { background: #e3f2fd; padding: 15px; border-radius: 10px; border-left: 5px solid #00aae4; margin-top: 20px; }
         .btn-whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25d366;
-            color: #fff;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-            text-decoration: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: fixed; bottom: 30px; right: 30px; background: #25d366; color: #fff;
+            width: 65px; height: 65px; border-radius: 50%; display: flex; justify-content: center;
+            align-items: center; font-size: 35px; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 1000;
         }
-
         @media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="foto-producto">
-            <img src="vileda.jpg" alt="Vileda">
+        <div class="foto">
+            <img src="vileda.jpg" alt="Vileda Profesional">
         </div>
         
         <div class="info">
             <h1>Vileda Professional</h1>
             <div class="precio">20,00€</div>
+            <p style="color: #666;">Bayeta profesional de máxima calidad. Envío tras Bizum.</p>
             
-            <form name="pedido-vileda" method="POST" data-netlify="true" class="formulario-contacto">
+            <form action="https://formspree.io/f/mlgnlyyq" method="POST" class="formulario">
                 <input type="text" name="nombre" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Tu Correo" required>
+                <input type="email" name="email" placeholder="Tu Correo (xacon005@gmail.com)" required>
                 <textarea name="mensaje" rows="3" placeholder="¿Cuántas necesitas?"></textarea>
-                <button type="submit" class="btn-enviar">ENVIAR PEDIDO POR CORREO</button>
+                <button type="submit" class="btn-enviar">ENVIAR PEDIDO POR EMAIL</button>
             </form>
 
-            <div class="bizum-box">
-                <strong>Bizum:</strong> <span style="color:#00aae4">635 51 81 17</span>
+            <div class="bizum">
+                <strong>Bizum:</strong> <span style="color:#00aae4; font-weight: bold;">635 51 81 17</span>
             </div>
         </div>
     </div>
 
-    <a href="https://wa.me/34635518117" class="btn-whatsapp" target="_blank">
+    <a href="https://wa.me/34635518117?text=Hola,%20vengo%20de%20la%20web%20y%20quiero%20pedir%20bayetas" class="btn-whatsapp" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
